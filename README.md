@@ -5,7 +5,7 @@ Generating synthetic Engine textures
 
   >> git clone https://github.com/prashanthtr/engineSynth.git
 
-  >> cd EngineSounds/
+  >> cd engineSynth/
 
   >> conda create -n EngineSounds python=3.8 ipykernel
 

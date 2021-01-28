@@ -48,7 +48,7 @@ class MyEngine(SI.MySoundModel) :
                 frequency = cf + math.floor(np.random.rand()*sweep)
 
                 '''Synth level parameters'''
-                cutOff = 0.05 + 0.15*np.random.random() # Duration of envelopes for DRIP
+                cutOff = 0.45 + 0.15*np.random.random() # Duration of envelopes for DRIP
                 # phase_increment = 2 * math.pi * start_Hz / 16000     # phase increment per sample
                 numSamples = int(1 * 16000)        # 1 second * 16000 sample rate
                 phase = 0
@@ -58,7 +58,7 @@ class MyEngine(SI.MySoundModel) :
                 amp_env = SI.gesture(1, 0, cutOff,numSamples)
                 # freq_sweep = SI.gesture(cf, cf+sweep, cutOff, numSamples)
                 samples = np.linspace(0, 1, 16000)
-                engineSawtooth = signal.sawtooth(2 * np.pi * frequency * samples + phase, width)
+                engineSawtooth = amp_env*signal.sawtooth(2 * np.pi * frequency * samples + phase, width)
 
                 return engineSawtooth
 
