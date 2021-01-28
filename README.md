@@ -3,7 +3,7 @@ Generating synthetic Engine textures
 
 # User instructions
 
-  >> git clone https://github.com/prashanthtr/EngineSounds.git
+  >> git clone https://github.com/prashanthtr/engineSynth.git
 
   >> cd EngineSounds/
 
@@ -21,10 +21,10 @@ Generating synthetic Engine textures
 
 >> jupyter notebook
 
->> Select *popTexture-notebook.ipynb* in the browser interface
+>> Select *EngineTextureVisualization-notebook.ipynb* in the browser interface
 
 # Generate files from commandline
-
+(NOT YET UPDATED)
 >> python3 generate.py config_file.json <outType>
 
 >> OutType: 0 (*paramManager*), 1 (*SonyGan*) and 2 (*Tfrecords*)
